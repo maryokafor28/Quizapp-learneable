@@ -3,11 +3,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
+  min-height: 100vh;
   margin: 0;
+  width: 100%;
   padding: 40px;
-  background-color: #003e06;
+  background: url(./images/cdc-XLhDvfz0sUM-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 #quiz-container {
   padding: 90px;
   border-radius: 10px;
@@ -38,33 +43,48 @@ body {
 
 #landing-page {
   display: block;
-  background: url(./images/cdc-VdkZz0v7EM8-unsplash.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: 2px solid #003e06;
+  margin-bottom: 50px;
+  border: 2px solid #5474e2;
   border-radius: 10px;
   padding: 90px;
-  /* max-width: 600px; */
-  box-shadow: 0px 4px 8px #003e06;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0.1);
+}
+
+#landing-page button {
+  padding: 30px 55px;
+  box-shadow: 0 0 10px rgba(0, 0, 0.1);
+  font-size: 35px;
 }
 #landing-page h1 {
-  padding-bottom: 30px;
-  color: black;
+  font-size: 20px;
+  color: #001f3f;
   font-size: 16px;
   width: 350px;
   line-height: 1.5;
+  margin-bottom: 45px;
 }
 span {
-  font-size: 46px;
+  font-weight: lighter;
+  font-family: "lobster";
+  font-size: 56px;
+}
+
+#landing-page p {
+  font-weight: lighter;
+  font-family: "lobster";
+  font-size: 25px;
+  color: #001f3f;
 }
 
 button {
   background-color: #fff;
   border: none;
-  padding: 10px 15px;
+  padding: 10px 20px;
   border-radius: 25px;
-  font-size: 25px;
+  font-size: 20px;
   font: bold;
+  color: #001f3f;
   cursor: pointer;
   margin: 35px;
   border-radius: 5px;
@@ -72,7 +92,7 @@ button {
 }
 
 button:hover {
-  background-color: #003e06;
+  background-color: #bac7f8;
 }
 
 #choices {

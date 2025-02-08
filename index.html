@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div id="landing-page">
+      <h1>WELCOME TO THE <span>MEDICAL LAB QUIZ</span></h1>
+      <button onclick="startQuiz()">START QUIZ</button>
+      <p>Welcome a step to test your knowledge</p>
+    </div>
+
+    <div id="quiz-container">
+      <div id="question"></div>
+      <div id="progress"></div>
+      <form id="choices"></form>
+      <button id="prev-btn" onclick="previousQuestion()">Previous</button>
+      <button id="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <div id="result-page">
+      <h1>Test Complete!</h1>
+      <p id="score-display"></p>
+      <button onclick="restartQuiz()">Restart Test</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

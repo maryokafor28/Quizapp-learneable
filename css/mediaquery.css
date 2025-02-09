@@ -1,0 +1,39 @@
+@media (max-width: 663px) {
+  body {
+    width: 85%;
+  }
+  #landing-page {
+    display: block;
+    margin-bottom: 40px;
+    border: 2px solid #5474e2;
+    border-radius: 10px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 0 10px rgba(0, 0, 0.1);
+  }
+  #landing-page h1 {
+    font-size: 16px;
+    font-size: 16px;
+    width: 300px;
+  }
+  span {
+    font-size: 45px;
+  }
+  #landing-page button {
+    padding: 20px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0.1);
+    font-size: 35px;
+  }
+  #quiz-container {
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0.1);
+    text-align: center;
+  }
+  button {
+    margin-top: 20px;
+  }
+}

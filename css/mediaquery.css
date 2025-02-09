@@ -1,6 +1,6 @@
 @media (max-width: 663px) {
   body {
-    width: 85%;
+    /* width: 85%; */
   }
   #landing-page {
     display: block;
@@ -8,7 +8,7 @@
     border: 2px solid #5474e2;
     border-radius: 10px;
     padding: 20px;
-    width: 320px;
+    /* width: 320px; */
     box-shadow: 0 0 10px rgba(0, 0, 0.1);
   }
   #landing-page h1 {

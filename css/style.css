@@ -100,7 +100,7 @@ button:hover {
   text-align: left;
 }
 
-.choice-label {
+.choice-option {
   display: block;
   margin: 10px 0;
   margin-top: 30px;
@@ -109,7 +109,7 @@ button:hover {
   padding: 12px 0;
   border-radius: 5px;
 }
-.choice-label :hover {
+.choice-option :hover {
   background-color: #007bff;
 }
 #progress {

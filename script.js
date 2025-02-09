@@ -69,54 +69,34 @@ function startQuiz() {
 }
 
 function displayQuestion() {
-  const currentQuestion = quizData[currentQuestionIndex];
-  questionElement.textContent = `${currentQuestionIndex + 1}. ${
-    currentQuestion.question
-  }`;
-  choicesElement.innerHTML = "";
+  const currentQuestion = quizData[currentQuestionIndex]; // Get the current question
+  const questionElement = document.getElementById("question"); // The HTML element for the question text
 
-  progressElement.textContent = `Question ${currentQuestionIndex + 1} of ${
-    quizData.length
-  }`;
+  // Display the current question
+  if (questionElement) {
+    questionElement.innerHTML = currentQuestion.question;
+  }
+  progressElement.textContent =
+    "Question " + (currentQuestionIndex + 1) + " of " + quizData.length;
+  // Display answer choices if needed
+  const choicesContainer = document.getElementById("choices");
+  choicesContainer.innerHTML = ""; // Clear previous choices
 
-  currentQuestion.choices.forEach((choice) => {
-    const choiceId = `choice-${choice}`;
-    const choiceElement = `
-            <label class="choice-label">
-              <input type="radio" name="answer" value="${choice}" id="${choiceId}">
-              ${choice}
-            </label>
-          `;
-    choicesElement.innerHTML += choiceElement;
+  currentQuestion.choices.forEach((choice, index) => {
+    const choiceElement = document.createElement("label");
+    choiceElement.innerHTML = `
+     <label class="choice-option">  
+    <input type="radio" name="answer" value="${choice}">
+      ${choice}
+      </label>
+    `;
+    choicesContainer.appendChild(choiceElement);
   });
 
   prevButton.style.display = currentQuestionIndex > 0 ? "inline-block" : "none";
   nextButton.textContent =
     currentQuestionIndex < quizData.length - 1 ? "Next" : "Submit";
 }
-
-// function displayQuestion() {
-//   const currentQuestion = quizData[currentQuestionIndex]; // Get the current question
-//   const questionElement = document.getElementById("question"); // The HTML element for the question text
-
-//   // Display the current question
-//   if (questionElement) {
-//     questionElement.innerHTML = currentQuestion.question;
-//   }
-
-//   // Display answer choices if needed
-//   const choicesContainer = document.getElementById("choices");
-//   choicesContainer.innerHTML = ""; // Clear previous choices
-
-//   currentQuestion.choices.forEach((choice, index) => {
-//     const choiceElement = document.createElement("label");
-//     choiceElement.innerHTML = `
-//       <input type="radio" name="answer" value="${choice}">
-//       ${choice}
-//     `;
-//     choicesContainer.appendChild(choiceElement);
-//   });
-// }
 
 function getSelectedChoice() {
   const selectedRadio = document.querySelector('input[name="answer"]:checked');

@@ -1,7 +1,7 @@
 const quizData = [
   {
     question:
-      "Which of thr following is used to measure haemoglobin levels in the blood",
+      "Which of the following is used to measure haemoglobin levels in the blood",
     choices: [
       "Hemocytometer",
       "centrifuge",
@@ -94,6 +94,29 @@ function displayQuestion() {
   nextButton.textContent =
     currentQuestionIndex < quizData.length - 1 ? "Next" : "Submit";
 }
+
+// function displayQuestion() {
+//   const currentQuestion = quizData[currentQuestionIndex]; // Get the current question
+//   const questionElement = document.getElementById("question"); // The HTML element for the question text
+
+//   // Display the current question
+//   if (questionElement) {
+//     questionElement.innerHTML = currentQuestion.question;
+//   }
+
+//   // Display answer choices if needed
+//   const choicesContainer = document.getElementById("choices");
+//   choicesContainer.innerHTML = ""; // Clear previous choices
+
+//   currentQuestion.choices.forEach((choice, index) => {
+//     const choiceElement = document.createElement("label");
+//     choiceElement.innerHTML = `
+//       <input type="radio" name="answer" value="${choice}">
+//       ${choice}
+//     `;
+//     choicesContainer.appendChild(choiceElement);
+//   });
+// }
 
 function getSelectedChoice() {
   const selectedRadio = document.querySelector('input[name="answer"]:checked');

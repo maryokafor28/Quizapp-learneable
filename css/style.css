@@ -116,3 +116,19 @@ button:hover {
   margin-top: 10px;
   font-weight: bold;
 }
+
+#result-page h1 {
+  font-size: 50px;
+  color: #001f3f;
+}
+
+#result-page button {
+  padding: 30px 55px;
+  box-shadow: 0 0 10px rgba(0, 0, 0.1);
+  font-size: 35px;
+}
+#score-display {
+  font-size: 20px;
+  color: #001f3f;
+  font-weight: bold;
+}
